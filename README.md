@@ -1,9 +1,6 @@
 # Solana Frontrunning Bot
 
 **A high-performance Solana bot designed to identify and exploit frontrunning opportunities on the Solana blockchain.**
-
----
-
 ### Let's Connect!
 <a href="mailto:bitbanana717@gmail.com" target="_blank">
   <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail">
@@ -32,13 +29,13 @@
 ---
 
 ## 🌟 Introduction
-This repository contains a **Solana Frontrunning Bot** built to identify and capitalize on frontrunning opportunities in the Solana ecosystem. The bot monitors pending transactions in the Solana mempool, identifies profitable opportunities, and submits transactions with higher gas fees to ensure priority execution.
+This repository contains a **Solana Frontrunning Bot** built using **Python** to identify and capitalize on frontrunning opportunities in the Solana ecosystem. The bot monitors pending transactions in the Solana mempool, identifies profitable opportunities, and submits transactions with higher gas fees to ensure priority execution.
 
 ---
 
 ## 🚀 Features
 - **Mempool Monitoring**: Tracks pending transactions in the Solana mempool.
-- **High-Speed Execution**: Built with Rust for low-latency performance.
+- **High-Speed Execution**: Built with Python for flexibility and ease of use.
 - **Gas Optimization**: Dynamically adjusts gas fees to outbid competitors.
 - **Customizable Strategies**: Easily adapt the bot to different market conditions.
 - **Risk Management**: Implements safeguards to minimize losses.
@@ -66,9 +63,9 @@ The bot uses the following strategy:
 
 ## 🛠 Installation Guide
 ### Prerequisites
-- **Rust**: Install Rust from [rustup.rs](https://rustup.rs/).
+- **Python 3.8+**: Install Python from [python.org](https://www.python.org/).
 - **Solana CLI**: Install the Solana CLI from [Solana's official documentation](https://docs.solana.com/cli/install-solana-cli-tools).
-- **Node.js**: Required for additional scripts (if any).
+- **Git**: Install Git from [git-scm.com](https://git-scm.com/).
 
 ### Steps
 1. Clone the repository:
@@ -76,20 +73,25 @@ The bot uses the following strategy:
    git clone https://github.com/bitfancy/solana-frontrunning-bot.git
    cd solana-frontrunning-bot
    ```
-2. Install dependencies:
+2. Set up a virtual environment (optional but recommended):
    ```bash
-   cargo build --release
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
    ```
-3. Configure the bot:
+3. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+4. Configure the bot:
    - Create a `.env` file in the root directory.
    - Add your Solana wallet private key and RPC URL:
      ```
      PRIVATE_KEY=your-private-key
      RPC_URL=https://api.mainnet-beta.solana.com
      ```
-4. Run the bot:
+5. Run the bot:
    ```bash
-   cargo run --release
+   python main.py
    ```
 
 ---
@@ -97,13 +99,13 @@ The bot uses the following strategy:
 ## 🖥 Usage
 1. **Test Mode**: Run the bot in test mode to simulate frontrunning opportunities without executing real transactions.
    ```bash
-   cargo run --release -- --test
+   python main.py --test
    ```
 2. **Live Mode**: Execute the bot in live mode to start frontrunning.
    ```bash
-   cargo run --release
+   python main.py
    ```
-3. **Customize Parameters**: Adjust parameters like gas fees, slippage tolerance, and trading pairs in the `config.toml` file.
+3. **Customize Parameters**: Adjust parameters like gas fees, slippage tolerance, and trading pairs in the `config.py` file.
 
 ---
 
@@ -142,3 +144,5 @@ For questions, feedback, or collaboration opportunities, feel free to reach out:
 🎮 **Discord**: [@bitbanana717](https://discord.com/users/bitbanana717)  
 
 </div>
+
+---
